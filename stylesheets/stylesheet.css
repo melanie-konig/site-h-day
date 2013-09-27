@@ -98,6 +98,11 @@ h1{
   padding:60px 0;
 }
 
+.quote{
+  font-style: italic;
+  font-size: 2em;
+}
+
 
 /*------------------------------------*\
     FOOTER
@@ -110,11 +115,10 @@ h1{
   right:0;
   width:100%;
   z-index:50;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
     padding: 15px 0;
     text-align: center;
-    text-transform: uppercase;
   opacity: 0.5;
   transition: opacity 200ms;
 }
@@ -160,4 +164,17 @@ nav select{
 }
 
 
+/*------------------------------------*\
+    PRESENTATION
+\*------------------------------------*/
+
+
+.regle{
+  background:#fff;
+  color: #444;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 2px;
+  vertical-align: top;
+}
 
