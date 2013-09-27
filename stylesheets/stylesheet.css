@@ -31,9 +31,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 .text-center{text-align:center;}
 
+.link,.link:visited{color:#fff;}
+.link:hover,.link:focus{text-decoration:none;color:#e679a2;}
 
 body{
   background-color: #444;
+  color: #fff;
 }
 
 h1{
@@ -54,6 +57,8 @@ header{
   top:0;
   left: 0;
   width: 100%;
+  background-color: #fff;
+  color: #444;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
