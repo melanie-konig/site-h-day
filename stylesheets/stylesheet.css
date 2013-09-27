@@ -81,6 +81,7 @@ h1{
   width: 100%;
   background-color: #fff;
   color: #444;
+  z-index: 999;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -95,8 +96,8 @@ h1{
 \*------------------------------------*/
 
 
-.section{
-  padding:60px 0;
+.main-section{
+  padding:340px 0 50px;
 }
 
 .quote{
