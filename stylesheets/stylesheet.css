@@ -40,6 +40,40 @@ h1{
 
 
 
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+
+
+
+nav{
+  padding: 25px 0;
+}
+  #navigation li{
+    display:inline-block;
+    margin:0 30px;
+    font-size: 0.9em;
+  }
+    #navigation li a{
+      text-decoration:none;
+      display:block;
+      padding:20px 0;
+      color:#aaa;
+      transition:color 200ms;
+    }
+    #navigation li a.active{
+      color:#e679a2;
+    }
+    #navigation li a:hover,#navigation li a:focus{
+      color:#444;
+    }
+
+nav select{
+  display:none;
+  padding:6px 16px;
+  margin:5px;
+  font-size:1.4em;
+}
 
 
 
