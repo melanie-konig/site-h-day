@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>H-Day {{ page.title }}</title>
+    <meta name="author" content="iTK" />
+    <meta content="initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <a href="/index.html"><img src="images/h-day-logo.png" alt="iTK's HACKING DAY"></a>
+      <nav>
+        <ul>
+          <li><a href="/index.html"></a></li>
+        </ul>
+      </nav>
+
+
+
+
+
+<!--
+      <nav>
+        {% if page.url contains "index.html" %}
+          <a href="/index.html" class="btn-selected">Accueil</a>
+        {% else %}
+          <a href="/index.html" class="btn">Accueil</a>
+        {% endif %}
+        {% if page.categories contains "cv" or page.url contains "cv.html" %}
+          <a href="/cv.html" class="btn-selected">⌘ CV</a>
+        {% else %}
+          <a href="/cv.html" class="btn">⌘ CV</a>
+        {% endif %}
+        {% if page.categories contains "projet" or page.url contains "projets.html" %}
+          <a href="/projets.html" class="btn-selected">♺ Projets</a>
+        {% else %}
+          <a href="/projets.html" class="btn">♺ Projets</a>
+        {% endif %}
+        {% if page.categories contains "article" or page.url contains "articles.html" %}
+          <a href="/articles.html" class="btn-selected">✍ Articles</a>
+        {% else %}
+          <a href="/articles.html" class="btn">✍ Articles</a>
+        {% endif %}
+        {% if page.url contains "contact.html" %}
+          <a href="/contact.html" class="btn-selected social-network-tab">Contact</a>
+        {% else %}
+          <a href="/contact.html" class="btn social-network-tab">Contact</a>
+        {% endif %}
+      </nav>
+    -->
+    </header>
+    {{ content }}
+  </body>
+</html>
