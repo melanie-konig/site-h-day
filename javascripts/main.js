@@ -75,5 +75,4 @@ $(function () {
 			$('#logosmall')[0].style.opacity = 0;
 		}
     }
-    }
 });
