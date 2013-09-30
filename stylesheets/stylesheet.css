@@ -116,15 +116,14 @@ h1{
 .footer{
     position: absolute;
     bottom: 0;
-  right:0;
-  width:100%;
-  z-index:50;
-    font-size: 0.8em;
-    font-weight: bold;
+    right:0;
+    width:100%;
+    z-index:50;
+    font-size: 0.6em;
     padding: 15px 0;
     text-align: center;
-  opacity: 0.5;
-  transition: opacity 200ms;
+    opacity: 0.5;
+    transition: opacity 200ms;
 }
   .footer:hover, .footer:focus{
     opacity:1;
@@ -176,9 +175,23 @@ nav select{
 .regle{
   background:#fff;
   color: #444;
-  padding: 10px 15px;
+  padding: 8px 15px 8px 30px;
   display: inline-block;
   border-radius: 2px;
   vertical-align: top;
+  position:relative;
 }
+  .regle span{
+    background: none repeat scroll 0 0 #E679A2;
+    border-radius: 50% 50% 50% 50%;
+    color: #FFFFFF;
+    font-size: 1.4em;
+    height: 40px;
+    left: -20px;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    top: -4px;
+    width: 40px;
+  }
 
