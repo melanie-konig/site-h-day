@@ -13,7 +13,7 @@ function Decompte()
     var date_actuelle = new Date(); // On déclare la date d'aujourd'hui.
     var annee = date_actuelle.getFullYear();
  
-    var hday = new Date(annee, 7, 30, 9, 0, 0); // Prochain HDAY 30/08/2013 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
+    var hday = new Date(annee, 9, 8, 9, 0, 0); // Prochain HDAY 08/10/2013 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
 	
 	// si le Hday est en cours ou dépassé
 	if (hday.getTime() < date_actuelle.getTime()){
@@ -45,7 +45,7 @@ function Decompte()
 	if(i_restantes<10)i_restantes="0"+i_restantes;
 	if(s_restantes<10)s_restantes="0"+s_restantes;
 	//==================
-	
+
     var texte = d_restants+ ":" +H_restantes+ ":" +i_restantes+ ":" +s_restantes ;
 	return texte;
 }
