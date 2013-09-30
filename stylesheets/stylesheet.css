@@ -180,26 +180,13 @@ nav select{
 \*------------------------------------*/
 
 
-.regle{
-  background:#fff;
-  color: #444;
-  padding: 8px 15px 8px 30px;
-  display: inline-block;
-  border-radius: 2px;
-  vertical-align: top;
-  position:relative;
+.regles span{
+  display:inline-block;
+  border-radius: 50% 50% 50% 50%;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
 }
-  .regle span{
-    background: none repeat scroll 0 0 #E679A2;
-    border-radius: 50% 50% 50% 50%;
-    color: #FFFFFF;
-    font-size: 1.4em;
-    height: 40px;
-    left: -20px;
-    line-height: 40px;
-    position: absolute;
-    text-align: center;
-    top: -4px;
-    width: 40px;
-  }
 
