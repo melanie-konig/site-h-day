@@ -60,3 +60,22 @@ function CompteARebours()
 	*/
 }
 setInterval(CompteARebours, 10); // Rappel de la fonction toutes les 1000 millisecondes (toutes les secondes quoi !).
+
+
+
+/*------------------------------------*\
+    SCROLL SPY
+\*------------------------------------*/
+
+
+$(function () {
+
+	$(window).scroll(function(){  
+        posScroll = $(document).scrollTop();  
+        if(posScroll >=200)  
+            $('.header').className = "header text-center header-fixed";  
+        else  
+            $('.header').className = "header text-center"; 
+    });
+
+});
