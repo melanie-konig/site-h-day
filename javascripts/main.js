@@ -40,13 +40,13 @@ function Decompte()
 		i_restantes = Math.floor(i_restantes % 60); // Minutes restantes
 		H_restantes = Math.floor(H_restantes % 24); // Heures restantes
 		d_restants = Math.floor(d_restants); // Jours restants
+
+	if(H_restantes<10)H_restantes="0"+H_restantes; //Mise sur 2 digit si < 10
+	if(i_restantes<10)i_restantes="0"+i_restantes;
+	if(s_restantes<10)s_restantes="0"+s_restantes;
 	//==================
-	/*var mois_fr = new Array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
- 
-	var texte = "Nous sommes le <strong>" +date_actuelle.getDate()+ " " +mois_fr[date_actuelle.getMonth()]+ " " +date_actuelle.getFullYear()+ "</strong>," +
-            " et il est <strong>" +date_actuelle.getHours()+ "h" +date_actuelle.getMinutes()+ "</strong>.<br />";
-	*/
-    var texte = d_restants+ " : " +H_restantes+ " : " +i_restantes+ " : " +s_restantes ;
+	
+    var texte = d_restants+ ":" +H_restantes+ ":" +i_restantes+ ":" +s_restantes ;
 	return texte;
 }
 function CompteARebours()
@@ -54,10 +54,6 @@ function CompteARebours()
 	var texte = Decompte();
 	document.getElementById("countdown-header").innerHTML = texte;
 	if(document.getElementById("countdown-section")) document.getElementById("countdown-section").innerHTML = texte;
-	/*
-	document.getElementById("onglet_decompte").innerHTML = "<strong>Next : unknow...</strong>";
-	if(document.getElementById("decompte")) document.getElementById("decompte").innerHTML = "<strong>-</strong>";
-	*/
 }
 setInterval(CompteARebours, 10); // Rappel de la fonction toutes les 1000 millisecondes (toutes les secondes quoi !).
 
@@ -69,13 +65,15 @@ setInterval(CompteARebours, 10); // Rappel de la fonction toutes les 1000 millis
 
 
 $(function () {
-
-	$(window).scroll(function(){  
-        posScroll = $(document).scrollTop();  
-        if(posScroll >=200)  
-            $('.header').className = "header text-center header-fixed";  
-        else  
-            $('.header').className = "header text-center"; 
-    });
-
+	window.onscroll = function(){  
+        posScroll = window.scrollY;  
+        if(posScroll >=217){
+			$('#header')[0].className = "header text-center header-fixed";
+			$('#logosmall')[0].style.opacity = 1;
+        }else{
+			$('#header')[0].className = "header text-center";
+			$('#logosmall')[0].style.opacity = 0;
+		}
+    }
+    }
 });
