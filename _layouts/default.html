@@ -6,24 +6,24 @@
     <meta name="author" content="iTK">
     <meta content="initial-scale=1.0" name="viewport">
     <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">    
-    <!--[if lt IE 9]><script src="javascripts/html5shiv.js" /></script><![endif]-->
-    <script src="javascripts/ki.min.js"></script> 
-    <script src="javascripts/main.js"></script> 
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}stylesheets/stylesheet.css">    
+    <!--[if lt IE 9]><script src="{{site.baseurl}}javascripts/html5shiv.js" /></script><![endif]-->
+    <script src="{{site.baseurl}}javascripts/ki.min.js"></script> 
+    <script src="{{site.baseurl}}javascripts/main.js"></script> 
   </head>
   <body>
     <div id="container">
     <header id="header" class="header text-center">
-      <a href="index.html"><img src="images/h-day-logo.png" alt="iTK's HACKING DAY" class="logo"></a>
+      <a href="{{site.baseurl}}index.html"><img src="{{site.baseurl}}images/h-day-logo.png" alt="iTK's HACKING DAY" class="logo"></a>
       <div id="countdown-header"></div>
-      <a href="index.html"><img id="logosmall" src="images/h-day-logo-small.png" alt="iTK's HACKING DAY" class="logo"></a>
+      <a href="{{site.baseurl}}index.html"><img id="logosmall" src="{{site.baseurl}}images/h-day-logo-small.png" alt="iTK's HACKING DAY" class="logo"></a>
       <nav class="nav">
         <ul id="navigation">
-          <li><a href="index.html" {% if page.url contains "index.html" %}class="active"{% endif %}>Accueil</a></li>
-          <li><a href="presentation.html" {% if page.url contains "presentation.html" %}class="active"{% endif %}>Présentation</a></li>
-          <li><a href="projets.html" {% if page.url contains "projets.html" %}class="active"{% endif %}>Projets</a></li>
-          <li><a href="hdays.html" {% if page.url contains "hdays.html" %}class="active"{% endif %}>H-days</a></li>
-          <li><a href="galerie.html" {% if page.url contains "galerie.html" %}class="active"{% endif %}>Galeries</a></li>
+          <li><a href="{{site.baseurl}}index.html" {% if page.url contains "index.html" %}class="active"{% endif %}>Accueil</a></li>
+          <li><a href="{{site.baseurl}}presentation.html" {% if page.url contains "presentation.html" %}class="active"{% endif %}>Présentation</a></li>
+          <li><a href="{{site.baseurl}}projets.html" {% if page.url contains "projets.html" %}class="active"{% endif %}>Projets</a></li>
+          <li><a href="{{site.baseurl}}hdays.html" {% if page.url contains "hdays.html" %}class="active"{% endif %}>H-days</a></li>
+          <li><a href="{{site.baseurl}}galerie.html" {% if page.url contains "galerie.html" %}class="active"{% endif %}>Galeries</a></li>
         </ul>
       </nav>
     </header>
