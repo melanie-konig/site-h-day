@@ -2,5 +2,14 @@
 layout: default
 title: Projets
 ---
-  <h1 class="specialfont text-center">Bienvenue</h1>
-  <p>Texte</p>
+
+{% for post in site.categories.projet %}
+<article class="projets">
+	<img src="" alt="" />
+	<div class="date">{{ post.dates }}</p>
+	<h2>{{ post.title }}</h2>
+	<p>{{ post.resume }}</p>
+	<div class="tags">{{ post.tags }}</p>
+</article>
+{% endfor %}
+
