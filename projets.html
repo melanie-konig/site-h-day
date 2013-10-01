@@ -7,7 +7,7 @@ title: Projets
 <article class="projets">
 	<img src="{{ post.images[0] }}" alt="" />
 	<div class="date">{% for date in post.dates %}{{ date }} {% endfor %}</div>
-	<h2 class="specialfont">{{ post.titre }}</h2>
+	<h1 class="titre-blanc specialfont">{{ post.titre }}</h1>
 	<div class="tags">
 		{% for techno in post.technos %}
 			<a>{{ techno }}</a>
@@ -19,10 +19,10 @@ title: Projets
 
 
 <!--MOKED-->
-<article class="projets">
+<article class="tickets">
 	<img src="{{ post.images[0] }}" alt="" />
 	<div class="date">01/05/2013, 02/25/2013, 05/09/1988</div>
-	<h2 class="specialfont">Mocked Bitch</h2>
+	<h1 class="titre-blanc specialfont">Mocked Bitch</h1>
 	<div class="tags">
 		<a>techno</a>
 		<a>metal</a>
