@@ -5,11 +5,29 @@ title: Projets
 
 {% for post in site.categories.projet %}
 <article class="projets">
-	<img src="" alt="" />
-	<div class="date">{{ post.dates }}</p>
-	<h2>{{ post.title }}</h2>
-	<p>{{ post.resume }}</p>
-	<div class="tags">{{ post.tags }}</p>
+	<img src="{{ post.images[0] }}" alt="" />
+	<div class="date">{% for date in post.dates %}{{ date }}, {% endfor %}</p>
+	<h2>{{ post.titre }}</h2>
+	<p>{{ post.descriptions }}</p>
+	<div class="tags">
+		{% for techno in post.technos %}
+			<a>{{ techno }}</a>
+		{% endfor %}
+	</div>
 </article>
 {% endfor %}
 
+
+<!--MOKED-->
+<article class="projets">
+	<img src="{{ post.images[0] }}" alt="" />
+	<div class="date">01/05/2013, 02/25/2013, 05/09/1988</p>
+	<h2>Menotte Motha Fucka</h2>
+	<p>bla bla bla</p>
+	<div class="tags">
+		<a>techno</a>
+		<a>metal</a>
+		<a>hip hop</a>
+	</div>
+</article>
+<!--MOKED-->
