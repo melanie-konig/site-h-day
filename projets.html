@@ -3,17 +3,17 @@ layout: default
 title: Projets
 ---
 
-{% for post in site.categories.projet %}
+{% for post in site.categories.projets %}
 <article class="projets">
 	<img src="{{ post.images[0] }}" alt="" />
-	<div class="date">{% for date in post.dates %}{{ date }}, {% endfor %}</div>
-	<h2>{{ post.titre }}</h2>
-	<p>{{ post.descriptions }}</p>
+	<div class="date">{% for date in post.dates %}{{ date }} {% endfor %}</div>
+	<h2 class="specialfont">{{ post.titre }}</h2>
 	<div class="tags">
 		{% for techno in post.technos %}
 			<a>{{ techno }}</a>
 		{% endfor %}
 	</div>
+	<p class="contenu">{{ post.description }}</p>
 </article>
 {% endfor %}
 
@@ -22,12 +22,12 @@ title: Projets
 <article class="projets">
 	<img src="{{ post.images[0] }}" alt="" />
 	<div class="date">01/05/2013, 02/25/2013, 05/09/1988</div>
-	<h2 class="specialfont">Menotte Motha Fucka</h2>
-	<p class="contenu">bla bla bla</p>
+	<h2 class="specialfont">Mocked Bitch</h2>
 	<div class="tags">
 		<a>techno</a>
 		<a>metal</a>
 		<a>hip-hop</a>
 	</div>
+	<p class="contenu">bla bla bla</p>
 </article>
 <!--MOKED-->
