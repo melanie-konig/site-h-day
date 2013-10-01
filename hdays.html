@@ -7,7 +7,7 @@ title: H-Days
 {% for projet in site.categories.projets %}
 {% if hd.projets contains projet.titre %}
 <article class="projets">
-	<font size="32">{{ hd.date }}</font>
+	<font size="32">{{ hd.date | date_to_string }}</font>
 	<a class="tickets-global-link" href="{{ projet.url }}">{{ projet.titre }}</a>
 </article>
 {% endif %}
