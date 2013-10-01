@@ -15,6 +15,9 @@ title: Projets
 		{% endfor %}
 	</div>
 	<div class="contenu">{{ post.description }}</div>
+	{% for membre in post.equipe %}
+		<a class="tickets-global-link" href="{{ site.baseurl }}membres.html#{{membre}}">{{membre}}</a>
+	{% endfor %}
 </article>
 </a>
 {% endfor %}

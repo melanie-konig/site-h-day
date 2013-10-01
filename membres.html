@@ -1,0 +1,7 @@
+---
+layout: default
+title: Membres
+---
+{% for membre in site.categories.membres %}
+<a name="{{membre.nom}}">{{membre.nom}}</a>
+{% endfor %}
