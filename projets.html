@@ -4,7 +4,8 @@ title: Projets
 ---
 
 {% for post in site.categories.projets %}
-<article class="projets">
+<a class="tickets-global-link" href="{{ post.url }}">
+<article class="tickets">
 	<img src="{{ post.images[0] }}" alt="" />
 	<div class="date">{% for date in post.dates %}{{ date }} {% endfor %}</div>
 	<h1 class="titre-blanc specialfont">{{ post.titre }}</h1>
@@ -13,21 +14,7 @@ title: Projets
 			<a>{{ techno }}</a>
 		{% endfor %}
 	</div>
-	<p class="contenu">{{ post.description }}</p>
+	<div class="contenu">{{ post.description }}</div>
 </article>
+</a>
 {% endfor %}
-
-
-<!--MOKED-->
-<article class="tickets">
-	<img src="{{ post.images[0] }}" alt="" />
-	<div class="date">01/05/2013, 02/25/2013, 05/09/1988</div>
-	<h1 class="titre-blanc specialfont">Mocked Bitch</h1>
-	<div class="tags">
-		<a>techno</a>
-		<a>metal</a>
-		<a>hip-hop</a>
-	</div>
-	<p class="contenu">bla bla bla</p>
-</article>
-<!--MOKED-->

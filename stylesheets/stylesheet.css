@@ -218,7 +218,9 @@ nav select{
 \*------------------------------------*/
 
 
-
+.tickets-global-link{
+  text-decoration: none;
+}
 
 .tickets {
   background: none repeat scroll 0 0 #555555;
