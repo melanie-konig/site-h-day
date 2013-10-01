@@ -4,7 +4,12 @@ title: H-Days
 ---
 
 {% for hd in site.categories.hday %}
+{% for projet in site.categories.projets %}
+{% if hd.projets contains projet.titre %}
 <article class="projets">
-	<font size="32">blabla</font>
+	<font size="32">{{ hd.date }}</font>
+	<font size="32">{{ projet.titre }}</font>
 </article>
+{% endif %}
+{% endfor %}
 {% endfor %}
