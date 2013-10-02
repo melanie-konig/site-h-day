@@ -13,7 +13,7 @@ $(function () {
 					$(element)[0].parentElement.parentElement.hidden = false;
 				});
 			}
-		} else {
+		} else if($('div#tagFilterSentence')[0] !== undefined) {
 			$('div#tagFilterSentence')[0].hidden = true;
 		}
 	}
