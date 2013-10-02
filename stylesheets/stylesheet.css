@@ -261,7 +261,7 @@ nav select{
       padding: 2px 5px;
     }
 
-  .tickets img {
+  .tickets .image-tickets {
     float: left;
     padding: 0 40px 0 0;
     width: 120px;

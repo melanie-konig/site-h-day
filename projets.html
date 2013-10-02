@@ -5,13 +5,13 @@ title: Projets
 
 {% for post in site.categories.projets %}
 <article class="tickets">
-	<img src="{{ post.images[0] }}" alt="" />
+	<img src="{{ post.images[0] }}" alt="" class="image-tickets" />
 	<div class="date">{% for date in post.dates %}{{ date }}<br />{% endfor %}</div>
 	<h1 class="titre-blanc specialfont"><a class="tickets-global-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.titre }}</a></h1>
 	<div class="tags">
 		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : ">
 		{% for techno in post.technos %}
-			<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+			<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
 		{% endfor %}
 	</div>
 	<div class="contenu">
