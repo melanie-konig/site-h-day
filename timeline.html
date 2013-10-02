@@ -8,10 +8,10 @@ title: H-Days
 	<div class="timeline-block">
 		<div class="timeline-date">{{ hd.date | date_to_string }}<img src="{{site.baseurl}}/images/icon.png"></div>
 		<h1 class="specialfont timeline-titre">{{ hd.title }}</h1>
-		<div class="tags">
+		<div class="tags timeline-projets">
 			{% for projet in site.categories.projets %}
 				{% if hd.projets contains projet.nom_unique %}
-					<a href="{{ projet.url }}" class="timeline-projets tickets-global-link">
+					<a href="{{ projet.url }}">
 						{{ projet.titre }}
 					</a><br />
 				{% endif %}

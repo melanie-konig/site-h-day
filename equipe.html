@@ -30,7 +30,7 @@ title: Présentation
 		Projets : 
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains membre.prenom %}
-				<a class="tickets-global-link" href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
+				<a href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
 			{% endif %}
 		{% endfor %}
 	</div>
@@ -39,7 +39,7 @@ title: Présentation
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains membre.prenom %}
 				{% for techno in projet.technos %}
-					<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+					<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
 				{% endfor %}
 			{% endif %}
 		{% endfor %}

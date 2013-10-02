@@ -16,7 +16,7 @@ title: Projets
 	<div class="tags">
 		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
 		{% for techno in post.technos %}
-			<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+			<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
 		{% endfor %}
 	</div>
 	<div class="membres">
@@ -24,7 +24,7 @@ title: Projets
 		{% for prenom in post.equipe %}
 			{% for membre in site.categories.equipes %}
 				{% if prenom == membre.prenom %}
-					<a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
+					<a href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
 				{% endif %}
 			{% endfor %}
 		{% endfor %}
