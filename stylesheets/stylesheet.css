@@ -220,6 +220,9 @@ nav select{
     PROJETS
 \*------------------------------------*/
 
+.projet-description{
+  font-size: 0.9em;
+}
 
 .tickets-global-link{
   text-decoration: none;
