@@ -11,7 +11,7 @@ title: H-Days
 		<div class="tags timeline-projets">
 			{% for projet in site.categories.projets %}
 				{% if hd.projets contains projet.nom_unique %}
-					<a href="{{ projet.url }}">
+					<a href="{{site.baseurl}}{{ projet.url }}">
 						{{ projet.titre }}
 					</a><br />
 				{% endif %}
