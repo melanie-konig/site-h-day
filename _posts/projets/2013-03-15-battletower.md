@@ -1,8 +1,9 @@
 ---
 layout: projet-detail
+nom_unique: battletower
 titre: Battle Tower
 images: [images/projets/default.png]
-description: Un jeu au tour par tour à deux.
+description: "Un jeu au tour par tour à deux."
 technos: [scala, playframework, js, crafty]
 dates: [15/03/2013, 23/04/2013]
 equipe: [MarcB, Marc, Romain, Laurent]
