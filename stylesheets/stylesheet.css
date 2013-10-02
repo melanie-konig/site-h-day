@@ -254,15 +254,19 @@ nav select{
   .tags, .membres{
     margin: 10px 0;
     padding: 0 0 0 160px;
+    font-size: 0.8em;
   }
     .tags a, .membres a{
       background: none repeat scroll 0 0 #333333;
       border: 1px solid #222222;
       border-radius: 2px 2px 0 0;
-      font-size: 0.8em;
       margin: 5px 0;
       overflow: hidden;
       padding: 2px 5px;
+      transition:border-color 200ms;
+    }
+    .tags a:hover, .membres a:hover{
+      border: 1px solid #FFF;
     }
     .tags img, .membres img{
       vertical-align: middle;

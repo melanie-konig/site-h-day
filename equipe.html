@@ -7,8 +7,11 @@ title: Présentation
 <article class="tickets">
 	<img src="{{ membre.photo }}" alt="" class="image-tickets" /> 
 	<div class="date">Chez ITK depuis le {{membre.date | date: "%d/%m/%Y"}}</div> 
-	<h1 class="specialfont titre-blanc"><a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{membre.nom}} {{membre.prenom}}</a></h1> 
-	<div class="contenu">{{membre.bio}}</div> 
+	<h1 class="specialfont titre-blanc"><a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{membre.prenom}} {{membre.nom}}</a></h1> 
+	<div class="contenu">
+		{{membre.bio}}<br /><br />
+		{% if membre.blog %}<a class="tickets-global-link" href="{{membre.blog}}">Blog perso</a>{% endif %}
+	</div> 
 	<div class="resals">
 		{% if membre.github %}<a href="{{membre.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
 		{% if membre.googleplus %}<a href="{{membre.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
@@ -16,17 +19,17 @@ title: Présentation
 		{% if membre.viadeo %}<a href="{{membre.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
 		{% if membre.twitter %}<a href="{{membre.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
 		{% if membre.facebook %}<a href="{{membre.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
-		{% if membre.blog %}<a href="{{membre.blog}}">Blog perso</a>{% endif %}
+		
 	</div>
-	<div>
+	<div class="tags">
 		Projets : 
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains membre.prenom %}
-				<a href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
+				<a class="tickets-global-link" href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
 			{% endif %}
 		{% endfor %}
 	</div>
-	<div>
+	<div class="tags">
 		Technos : 
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains membre.prenom %}
