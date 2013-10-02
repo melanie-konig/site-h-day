@@ -4,7 +4,7 @@ title: Projets
 ---
 
 {% for post in site.categories.projets %}
-<a class="tickets-global-link" href="{{ post.url }}">
+<a class="tickets-global-link" href="{{ site.baseurl }}/{{ post.url }}">
 <article class="tickets">
 	<img src="{{ post.images[0] }}" alt="" />
 	<div class="date">{% for date in post.dates %}{{ date }} {% endfor %}</div>
