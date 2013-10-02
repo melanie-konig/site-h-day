@@ -2,9 +2,35 @@
 layout: default
 ---
 <div class="container-max">
-	<div class="article-max">
-		<h2 class="article-title">{{page.nom}} {{page.prenom}}</h2>
-		<img src="{{page.photo}}" />
-	  {{ content }}
+	<img src="{{ page.photo }}" alt="" class="image-tickets" /> 
+	<div class="date">Chez ITK depuis le {{page.date | date: "%d/%m/%Y"}}</div> 
+	<h1 class="specialfont titre-blanc">{{page.nom}} {{page.prenom}}</h1> 
+	<div class="contenu">{{page.bio}}</div> 
+	<div class="resals">
+		{% if page.github %}<a href="{{page.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
+		{% if page.googleplus %}<a href="{{page.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
+		{% if page.linkedin %}<a href="{{page.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" width="50px" /></a>{% endif %}
+		{% if page.viadeo %}<a href="{{page.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
+		{% if page.twitter %}<a href="{{page.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
+		{% if page.facebook %}<a href="{{page.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
+		{% if page.blog %}<a href="{{page.blog}}">Blog perso</a>{% endif %}
+	</div>
+	<div>
+		Projets : 
+		{% for projet in site.categories.projets %}
+			{% if projet.equipe contains page.prenom %}
+				<a href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div>
+		Technos : 
+		{% for projet in site.categories.projets %}
+			{% if projet.equipe contains page.prenom %}
+				{% for techno in projet.technos %}
+					<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
 	</div>
 <div class="container">
