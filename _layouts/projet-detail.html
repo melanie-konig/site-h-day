@@ -5,8 +5,19 @@ layout: default
 <div class="date">{% for date in page.dates %}{{ date }}<br /> {% endfor %}</div>
 <h1 class="specialfont titre-blanc">{{ page.titre }} {%if page.urlSources%}<a href="{{page.urlSources}}" target="_blank"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{%endif%}</h1>
 <div class="tags">
+	<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
 	{% for techno in page.technos %}
 		<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+	{% endfor %}
+</div>
+<div class="membres">
+	<img src="{{site.baseurl}}/images/membres.png" alt="Membres : ">
+	{% for prenom in page.equipe %}
+		{% for membre in site.categories.equipes %}
+			{% if prenom == membre.prenom %}
+				<a href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
+			{% endif %}
+		{% endfor %}
 	{% endfor %}
 </div>
 <p class="contenu">{{ content }}</p>
