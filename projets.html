@@ -11,7 +11,7 @@ title: Projets
 	<div class="tags">
 		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : ">
 		{% for techno in post.technos %}
-			<a>{{ techno }}</a>
+			<a href="{{ site.baseurl }}/tags.html#{{techno}}">{{ techno }}</a>
 		{% endfor %}
 	</div>
 	<div class="contenu">
