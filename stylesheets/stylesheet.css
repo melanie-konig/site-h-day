@@ -248,7 +248,7 @@ nav select{
 
   .contenu {
     line-height: 1.5em;
-    padding: 10px 100px 0 160px;
+    padding: 10px 100px 10px 160px;
   }
 
   .tags, .membres{
@@ -266,6 +266,7 @@ nav select{
     }
     .tags img, .membres img{
       vertical-align: middle;
+      padding-right: 5px;
     }
 
   .tickets .image-tickets {
