@@ -316,3 +316,7 @@ nav select{
 .timeline-titre {
     font-size: 3em;
 }
+
+.timeline-projets{
+  margin:10px 0;
+}
