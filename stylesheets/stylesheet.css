@@ -126,6 +126,9 @@ body{
 .main-section{
   padding:360px 0 100px;
 }
+.main-section-timeline{
+  padding:300px 0 0;
+}
 
 .quote{
   background: none repeat scroll 0 0 #666666;
@@ -283,6 +286,9 @@ nav select{
     margin: 0 0 0 200px;
     padding: 0 40px;
     position: relative;
+}
+.timeline-block-empty{
+    padding: 100px 40px;
 }
 
 .timeline-date:after {

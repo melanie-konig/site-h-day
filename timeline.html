@@ -3,6 +3,7 @@ layout: default
 title: H-Days
 ---
 
+<div class="timeline-block timeline-block-empty"></div>
 {% for hd in site.categories.hday %}
 	<div class="timeline-block">
 		<div class="timeline-date">{{ hd.date | date_to_string }}<img src="{{site.baseurl}}/images/icon.png"></div>
@@ -16,3 +17,4 @@ title: H-Days
 		{% endfor %}
 	</div>
 {% endfor %}
+<div class="timeline-block timeline-block-empty"></div>
