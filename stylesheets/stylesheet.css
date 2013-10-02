@@ -239,6 +239,7 @@ nav select{
 
   .titre-blanc{
     font-size: 3em;
+    padding: 0 0 0 160px;
   }
 
   .contenu {
@@ -248,6 +249,7 @@ nav select{
 
   .tags {
     margin: 10px 0;
+    padding: 0 0 0 160px;
   }
     .tags a {
       background: none repeat scroll 0 0 #333333;
