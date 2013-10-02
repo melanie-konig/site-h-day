@@ -8,5 +8,6 @@ technos: [django, python]
 dates: [15/03/2013]
 equipe: [Cuong, Jean-François, Jennifer]
 categories: [projets]
+urlSources: "https://github.com/ITKWeb/xwing"
 ---
 Trop bien comme projet !

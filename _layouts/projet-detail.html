@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="date">{% for date in page.dates %}{{ date }} {% endfor %}</div>
-<h1 class="titre-blanc">{{ page.titre }}</h1>
+<div class="date">{% for date in page.dates %}{{ date }}<br /> {% endfor %}</div>
+<h1 class="specialfont titre-blanc">{{ page.titre }} {%if page.urlSources%}<a href="{{page.urlSources}}" target="_blank"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{%endif%}</h1>
 <div class="tags">
 	{% for techno in page.technos %}
 		<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
