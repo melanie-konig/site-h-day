@@ -12,10 +12,10 @@ title: Présentation
 		{{membre.bio}}
 		{% if membre.blog %}
 			<br /><br />
-			<a class="tickets-global-link" href="{{membre.blog}}">Blog perso</a>
+			<a class="tickets-global-link" href="{{membre.blog}}">{{membre.blog}}</a>
 		{% endif %}
 	</div>
-	{% if membre.github || membre.googleplus || membre.linkedin || membre.viadeo || membre.twitter || membre.facebook %}
+	{% if membre.github or membre.googleplus or membre.linkedin or membre.viadeo or membre.twitter or membre.facebook %}
 		<div class="resals">
 			{% if membre.github %}<a href="{{membre.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{% endif %}
 			{% if membre.googleplus %}<a href="{{membre.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" /></a>{% endif %}

@@ -3,19 +3,26 @@ layout: default
 ---
 <div class="text-center">
 	<div class="img-profil" style="background-image:url('{{ page.photo }}');"></div>
-	<div class="date">Chez ITK depuis le {{page.date | date: "%d/%m/%Y"}}</div> 
-	<h1 class="specialfont titre-blanc">{{page.nom}} {{page.prenom}}</h1> 
-	<div class="contenu">{{page.bio}}</div> 
-	<div class="resals">
-		{% if page.github %}<a href="{{page.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
-		{% if page.googleplus %}<a href="{{page.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
-		{% if page.linkedin %}<a href="{{page.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" width="50px" /></a>{% endif %}
-		{% if page.viadeo %}<a href="{{page.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
-		{% if page.twitter %}<a href="{{page.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
-		{% if page.facebook %}<a href="{{page.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
-		{% if page.blog %}<a href="{{page.blog}}">Blog perso</a>{% endif %}
+	<h1 class="specialfont titre-blanc">{{page.nom}} {{page.prenom}}</h1>
+	<div class="date-profil">Chez ITK depuis le {{page.date | date: "%d/%m/%Y"}}</div> 
+	<div class="contenu">
+		{{page.bio}}
+		{% if page.blog %}
+			<br /><br />
+			<a class="tickets-global-link" href="{{page.blog}}">{{page.blog}}</a>
+		{% endif %}
 	</div>
-	<div>
+	{% if page.github or page.googleplus or page.linkedin or page.viadeo or page.twitter or page.facebook %}
+		<div class="resals">
+			{% if page.github %}<a href="{{page.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{% endif %}
+			{% if page.googleplus %}<a href="{{page.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" /></a>{% endif %}
+			{% if page.linkedin %}<a href="{{page.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" /></a>{% endif %}
+			{% if page.viadeo %}<a href="{{page.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" /></a>{% endif %}
+			{% if page.twitter %}<a href="{{page.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" /></a>{% endif %}
+			{% if page.facebook %}<a href="{{page.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" /></a>{% endif %}
+		</div>
+	{% endif %}
+	<div class="tags">
 		Projets : 
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains page.prenom %}
@@ -23,12 +30,12 @@ layout: default
 			{% endif %}
 		{% endfor %}
 	</div>
-	<div>
+	<div class="tags">
 		Technos : 
 		{% for projet in site.categories.projets %}
 			{% if projet.equipe contains page.prenom %}
 				{% for techno in projet.technos %}
-					<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+					<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
 				{% endfor %}
 			{% endif %}
 		{% endfor %}
