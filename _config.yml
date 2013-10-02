@@ -1,0 +1,4 @@
+pygments: true
+name: "H-Day"
+description: "H-Day site"
+baseurl: /site-h-day
