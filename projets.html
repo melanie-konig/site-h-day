@@ -18,9 +18,13 @@ title: Projets
 		{% endfor %}
 	</div>
 	<div class="membres">
-		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : " /> 
-		{% for membre in post.equipe %}
-			<a class="tickets-global-link" href="{{ site.baseurl }}/membres.html#{{membre}}">{{membre}}</a>
+		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : ">
+		{% for prenom in post.equipe %}
+			{% for membre in site.categories.equipes %}
+				{% if prenom == membre.prenom %}
+					<a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
+				{% endif %}
+			{% endfor %}
 		{% endfor %}
 	</div>
 </article>

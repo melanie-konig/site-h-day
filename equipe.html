@@ -3,4 +3,17 @@ layout: default
 title: Présentation
 ---
 
+{% for equipe in site.categories.equipes %}
+<article class="tickets">
+	<center><h1>{{equipe.nom}} {{equipe.prenom}}</h1></center>
+	<div>Chez ITK depuis le {{equipe.date | date: "%d/%m/%Y"}}
+	<img src="{{ equipe.photo }}" alt="" class="image-tickets" />
+	<div>{{equipe.bio}}</div>
+	<ul>
+	{% for link in equipe.links %}
+		<li><a href="{{ link }}" target="_blank"> {{ link }}</a></li>
+	{% endfor %}
+	</ul>
+</article>
+{% endfor %}
 
