@@ -271,3 +271,31 @@ nav select{
     width: 120px;
     border-radius: 50%;
   }
+
+
+/*------------------------------------*\
+    TIMELINE
+\*------------------------------------*/
+
+
+.timeline-block {
+    border-left: 1px solid #AAAAAA;
+    margin: 0 0 0 200px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.timeline-date:after {
+    background: none repeat scroll 0 0 #444444;
+    content: url("images/icon.png");
+    position: absolute;
+    right: -55px;
+    top: -8px;
+}
+.timeline-date {
+    left: -200px;
+    position: absolute;
+    text-align: right;
+    top: 30px;
+    width: 160px;
+}
