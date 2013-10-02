@@ -284,25 +284,26 @@ nav select{
 .timeline-block {
     border-left: 1px solid #AAAAAA;
     margin: 0 0 0 200px;
-    padding: 40px;
+    padding: 0 40px 40px;
     position: relative;
 }
 .timeline-block-empty{
     padding: 100px 40px;
 }
 
-.timeline-date:after {
-    background: none repeat scroll 0 0 #444444;
-    position: absolute;
-    right: -55px;
-    top: -8px;
-}
 .timeline-date {
     left: -200px;
     position: absolute;
     text-align: right;
     top: 30px;
-    width: 160px;
+    width: 213px;
+    font-size: 0.9em;
+    color:#AAA;
+}
+.timeline-date img{
+    padding: 0 0 0 30px;
+    vertical-align: middle;
+    background: #444;
 }
 .timeline-titre {
     font-size: 3em;

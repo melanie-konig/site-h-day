@@ -7,7 +7,7 @@ title: H-Days
 {% for hd in site.categories.hday %}
 	<div class="timeline-block">
 		<div class="timeline-date">{{ hd.date | date_to_string }}<img src="{{site.baseurl}}/images/icon.png"></div>
-		<h1 class="font-special timeline-titre">{{ hd.title }}<h1>
+		<h1 class="specialfont timeline-titre">{{ hd.title }}<h1>
 		{% for projet in site.categories.projets %}
 			{% if hd.projets contains projet.nom_unique %}
 				<a href="{{ projet.url }}" class="timeline-projets tickets-global-link">
