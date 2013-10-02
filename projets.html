@@ -12,13 +12,13 @@ title: Projets
 		{{ post.description }}
 	</div>
 	<div class="tags">
-		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : "> : 
+		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
 		{% for techno in post.technos %}
 			<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
 		{% endfor %}
 	</div>
 	<div class="membres">
-		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : "> : 
+		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : " /> 
 		{% for membre in post.equipe %}
 			<a class="tickets-global-link" href="{{ site.baseurl }}/membres.html#{{membre}}">{{membre}}</a>
 		{% endfor %}

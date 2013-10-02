@@ -4,12 +4,20 @@ title: H-Days
 ---
 
 {% for hd in site.categories.hday %}
-{% for projet in site.categories.projets %}
-{% if hd.projets contains projet.nom_unique %}
-<article class="projets">
-	<font size="32">{{ hd.date | date_to_string }}</font>
-	<a class="tickets-global-link" href="{{ projet.url }}">{{ projet.titre }}</a>
-</article>
-{% endif %}
-{% endfor %}
+<div class="timeline-block">
+	<div class="timeline-date">{{ hd.date | date_to_string }}</div>
+	{% for projet in site.categories.projets %}
+		<h1 class="titre-blanc">{{ hd.title }}<h1>
+		{% if hd.projets contains projet.nom_unique %}
+			<a href="{{ projet.url }}" class="timeline-projets tickets-global-link">
+				{{ projet.titre }}
+			</a>
+		{% endif %}
+	{% endfor %}
+</div>
+
+
+
+
+	
 {% endfor %}
