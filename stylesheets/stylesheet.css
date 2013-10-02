@@ -288,7 +288,7 @@ nav select{
 .timeline-block {
     border-left: 1px solid #AAAAAA;
     margin: 0 0 0 200px;
-    padding: 0 40px 80px;
+    padding: 0 40px 90px;
     position: relative;
 }
 .timeline-block-empty{
@@ -305,7 +305,7 @@ nav select{
     color:#AAA;
 }
 .timeline-date img{
-    padding: 0 0 0 30px;
+    padding: 0 0 0 6px;
     vertical-align: middle;
     background: #444;
 }
