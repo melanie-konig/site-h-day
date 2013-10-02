@@ -14,6 +14,15 @@ title: Présentation
 		<li><a href="{{ link }}" target="_blank"> {{ link }}</a></li>
 	{% endfor %}
 	</ul>
+	<div>
+		{% if equipe.github %}<a href="{{equipe.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
+		{% if equipe.googleplus %}<a href="{{equipe.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
+		{% if equipe.linkedin %}<a href="{{equipe.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" width="50px" /></a>{% endif %}
+		{% if equipe.viadeo %}<a href="{{equipe.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
+		{% if equipe.twitter %}<a href="{{equipe.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
+		{% if equipe.facebook %}<a href="{{equipe.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
+		{% if equipe.blog %}<a href="{{equipe.blog}}">Blog perso</a>{% endif %}
+	</div>
 </article>
 {% endfor %}
 
