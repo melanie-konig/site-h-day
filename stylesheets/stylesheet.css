@@ -287,7 +287,7 @@ nav select{
 
 .timeline-date:after {
     background: none repeat scroll 0 0 #444444;
-    content: url("images/icon.png");
+    content: url("/images/icon.png");
     position: absolute;
     right: -55px;
     top: -8px;
