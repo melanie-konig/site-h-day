@@ -8,6 +8,7 @@ technos: [scala, playframework, js, crafty]
 dates: [15/03/2013, 23/04/2013]
 equipe: [MarcB, Marc, Romain, Laurent]
 categories: [projets]
+urlSources: "https://github.com/ITKWeb/BattleTower"
 ---
 Le but est de battre l'adversaire en conservant son armée et en détruisant celle de l’autre joueur.
 Dès le départ, les joueurs commencent avec un nombre de points identiques (par exemple 100). Avec ces points là, au premier tour, ils peuvent créer des tours de défense qui ont un certain coût (ex 40) ou des soldats (coût de 20 par exemple).
