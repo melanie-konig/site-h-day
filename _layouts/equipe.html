@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div class="container-max">
-	<img src="{{ page.photo }}" alt="" class="image-tickets" /> 
+<div class="text-center">
+	<div class="img-profil" style="background-image:url('{{ page.photo }}');"></div>
 	<div class="date">Chez ITK depuis le {{page.date | date: "%d/%m/%Y"}}</div> 
 	<h1 class="specialfont titre-blanc">{{page.nom}} {{page.prenom}}</h1> 
 	<div class="contenu">{{page.bio}}</div> 
@@ -33,4 +33,4 @@ layout: default
 			{% endif %}
 		{% endfor %}
 	</div>
-<div class="container">
+</div>
