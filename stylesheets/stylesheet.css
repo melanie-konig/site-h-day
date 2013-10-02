@@ -235,6 +235,7 @@ nav select{
     color: #AAAAAA;
     float: right;
     font-size: 0.8em;
+    line-height: 1.4em;
   }
 
   .titre-blanc{
@@ -259,6 +260,9 @@ nav select{
       margin: 5px 0;
       overflow: hidden;
       padding: 2px 5px;
+    }
+    .tags img, .membres img{
+      vertical-align: middle;
     }
 
   .tickets .image-tickets {
