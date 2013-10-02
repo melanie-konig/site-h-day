@@ -13,9 +13,10 @@ title: Projets
 			<a>{{ techno }}</a>
 		{% endfor %}
 	</div>
-	<div class="contenu">{{ post.description }}</div>
-	{% for membre in post.equipe %}
-		<a class="tickets-global-link" href="{{ site.baseurl }}/membres.html#{{membre}}">{{membre}}</a>
-	{% endfor %}
+	<div class="contenu">{{ post.description }}<br /><br />
+		{% for membre in post.equipe %}
+			<a class="tickets-global-link" href="{{ site.baseurl }}/membres.html#{{membre}}">{{membre}}</a>
+		{% endfor %}
+	</div>
 </article>
 {% endfor %}
