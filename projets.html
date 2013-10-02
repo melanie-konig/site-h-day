@@ -6,14 +6,19 @@ title: Projets
 {% for post in site.categories.projets %}
 <article class="tickets">
 	<img src="{{ post.images[0] }}" alt="" />
-	<div class="date">{% for date in post.dates %}{{ date }} {% endfor %}</div>
+	<div class="date">{% for date in post.dates %}{{ date }}<br />{% endfor %}</div>
 	<h1 class="titre-blanc specialfont"><a class="tickets-global-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.titre }}</a></h1>
 	<div class="tags">
+		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : ">
 		{% for techno in post.technos %}
 			<a>{{ techno }}</a>
 		{% endfor %}
 	</div>
-	<div class="contenu">{{ post.description }}<br /><br />
+	<div class="contenu">
+		{{ post.description }}
+	</div>
+	<div class="membres">
+		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : ">
 		{% for membre in post.equipe %}
 			<a class="tickets-global-link" href="{{ site.baseurl }}/membres.html#{{membre}}">{{membre}}</a>
 		{% endfor %}

@@ -247,11 +247,11 @@ nav select{
     padding: 10px 0 0 160px;
   }
 
-  .tags {
+  .tags, .membres{
     margin: 10px 0;
     padding: 0 0 0 160px;
   }
-    .tags a {
+    .tags a, .membres a{
       background: none repeat scroll 0 0 #333333;
       border: 1px solid #222222;
       border-radius: 2px 2px 0 0;
