@@ -7,7 +7,7 @@ title: Présentation
 <article class="tickets">
 	<img src="{{ membre.photo }}" alt="" class="image-tickets" /> 
 	<div class="date">Chez ITK depuis le {{membre.date | date: "%d/%m/%Y"}}</div> 
-	<h1 class="specialfont titre-blanc">{{membre.nom}} {{membre.prenom}}</h1> 
+	<h1 class="specialfont titre-blanc"><a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{membre.nom}} {{membre.prenom}}</a></h1> 
 	<div class="contenu">{{membre.bio}}</div> 
 	<div class="resals">
 		{% if membre.github %}<a href="{{membre.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
