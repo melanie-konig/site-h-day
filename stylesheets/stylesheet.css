@@ -284,7 +284,7 @@ nav select{
 .timeline-block {
     border-left: 1px solid #AAAAAA;
     margin: 0 0 0 200px;
-    padding: 0 40px;
+    padding: 40px;
     position: relative;
 }
 .timeline-block-empty{
