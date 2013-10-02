@@ -285,11 +285,11 @@ nav select{
 .timeline-block {
     border-left: 1px solid #AAAAAA;
     margin: 0 0 0 200px;
-    padding: 0 40px 40px;
+    padding: 0 40px 80px;
     position: relative;
 }
 .timeline-block-empty{
-    padding: 100px 40px;
+    padding: 40px;
 }
 
 .timeline-date {
