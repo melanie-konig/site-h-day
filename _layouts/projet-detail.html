@@ -11,15 +11,11 @@ layout: default
 </div>
 <p class="contenu">{{ content }}</p>
 
+{% for avancement in site.categories.avancements %}
+	{% if avancement.projet_nom_unique == page.nom_unique %}
 <article class="tickets">
-	Avancement
+	<div class="date">{{ avancement.date | date_to_string }}</div>
+	{{avancement.content}}
 </article>
-<article class="tickets">
-	Avancement
-</article>
-<article class="tickets">
-	Avancement
-</article>
-<article class="tickets">
-	Avancement
-</article>
+	{% endif %}
+{% endfor %}
