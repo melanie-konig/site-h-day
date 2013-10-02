@@ -3,20 +3,38 @@ layout: default
 title: Présentation
 ---
 
-{% for equipe in site.categories.equipes %}
+{% for membre in site.categories.equipes %}
 <article class="tickets">
-	<img src="{{ equipe.photo }}" alt="" class="image-tickets" />
-	<div class="date">Chez ITK depuis le {{equipe.date | date: "%d/%m/%Y"}}</div>
-	<h1 class="specialfont titre-blanc">{{equipe.nom}} {{equipe.prenom}}</h1>
-	<div class="contenu">{{equipe.bio}}</div>
+	<img src="{{ membre.photo }}" alt="" class="image-tickets" /> 
+	<div class="date">Chez ITK depuis le {{membre.date | date: "%d/%m/%Y"}}</div> 
+	<h1 class="specialfont titre-blanc"><a class="tickets-global-link" href="{{ site.baseurl }}{{ membre.url }}">{{membre.nom}} {{membre.prenom}}</a></h1> 
+	<div class="contenu">{{membre.bio}}</div> 
 	<div class="resals">
-		{% if equipe.github %}<a href="{{equipe.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
-		{% if equipe.googleplus %}<a href="{{equipe.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
-		{% if equipe.linkedin %}<a href="{{equipe.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" width="50px" /></a>{% endif %}
-		{% if equipe.viadeo %}<a href="{{equipe.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
-		{% if equipe.twitter %}<a href="{{equipe.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
-		{% if equipe.facebook %}<a href="{{equipe.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
-		{% if equipe.blog %}<a href="{{equipe.blog}}">Blog perso</a>{% endif %}
+		{% if membre.github %}<a href="{{membre.github}}"><img src="{{site.baseurl}}/images/equipes/github.png" width="50px" /></a>{% endif %}
+		{% if membre.googleplus %}<a href="{{membre.googleplus}}"><img src="{{site.baseurl}}/images/equipes/googleplus.png" width="50px" /></a>{% endif %}
+		{% if membre.linkedin %}<a href="{{membre.linkedin}}"><img src="{{site.baseurl}}/images/equipes/linkedin.png" width="50px" /></a>{% endif %}
+		{% if membre.viadeo %}<a href="{{membre.viadeo}}"><img src="{{site.baseurl}}/images/equipes/viadeo.png" width="50px" /></a>{% endif %}
+		{% if membre.twitter %}<a href="{{membre.twitter}}"><img src="{{site.baseurl}}/images/equipes/twitter.png" width="50px" /></a>{% endif %}
+		{% if membre.facebook %}<a href="{{membre.facebook}}"><img src="{{site.baseurl}}/images/equipes/facebook.png" width="50px" /></a>{% endif %}
+		{% if membre.blog %}<a href="{{membre.blog}}">Blog perso</a>{% endif %}
+	</div>
+	<div>
+		Projets : 
+		{% for projet in site.categories.projets %}
+			{% if projet.equipe contains membre.prenom %}
+				<a href="{{site.baseurl}}{{projet.url}}">{{projet.titre}}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div>
+		Technos : 
+		{% for projet in site.categories.projets %}
+			{% if projet.equipe contains membre.prenom %}
+				{% for techno in projet.technos %}
+					<a class="tickets-global-link" href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
 	</div>
 </article>
 {% endfor %}
