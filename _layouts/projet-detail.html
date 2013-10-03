@@ -4,7 +4,7 @@ layout: default
 
 <div class="date">{% for date in page.dates %}{{ date }}<br /> {% endfor %}</div>
 <h1 class="specialfont titre-blanc">{{ page.titre }} {%if page.urlSources%}<a href="{{page.urlSources}}" target="_blank"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{%endif%}</h1>
-<i class="projet-description">{{ page.description }}</i>
+<p class="projet-detail-description">{{ page.description }}</p>
 <div class="tags">
 	<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
 	{% for techno in page.technos %}
@@ -22,14 +22,21 @@ layout: default
 	{% endfor %}
 </div>
 
-{% if page.images %}
-{% for image in page.images %}
-	<a href="{{site.baseurl}}/{{image}}"><img src="{{site.baseurl}}/{{image}}" /></a>
-{% endfor %}
-{% endif %}
 
 <p class="contenu">{{ content }}</p>
 
+{% if page.images %}
+	<div class="images-projet text-center">
+		{% for image in page.images %}
+			<div href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
+		{% endfor %}
+	</diV>
+	<div class="popup-masque">
+		{% for image in page.images %}
+			<img src="{{site.baseurl}}/{{image}}" alt="" data-imageNum="{{image}}" />
+		{% endfor %}
+	</div>
+{% endif %}
 {% for avancement in site.categories.avancements %}
 	{% if avancement.projet_nom_unique == page.nom_unique %}
 <article class="tickets">

@@ -70,4 +70,19 @@ $(function () {
 			$('#logosmall')[0].style.opacity = 0;
 		}
     }
+    $('.images-projet div').on("click",function(){
+    	$('body')[0].style.overflow="hidden";
+    	$('.popup-masque')[0].style.display="block";
+    	var imageNum = this.getAttribute("data-imageNum");
+    	imageNum = '.popup-masque img[data-imageNum="' + imageNum + '"]';
+    	console.log(imageNum);
+    	$(imageNum)[0].style.display="block";
+    });
+    $('.popup-masque').on("click",function(){
+    	$('body')[0].style.overflow="auto";
+    	$('.popup-masque')[0].style.display="none";
+    	$('.popup-masque img').each(function(elem){
+    			elem.style.display="none";
+    		});
+    });
 });

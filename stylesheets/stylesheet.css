@@ -15,7 +15,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     GLOBAL
 \*------------------------------------*/
 
-
+a {
+  color: white;
+}
 
 @font-face {
     font-family: 'alex_brushregular';
@@ -234,7 +236,7 @@ nav select{
   }
 
 .tickets {
-  background: none repeat scroll 0 0 #555555;
+  background: #555;
   border-radius: 2px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   padding: 40px;
@@ -286,9 +288,9 @@ nav select{
 
   .tickets .image-tickets {
     float: left;
-    padding: 0 40px 0 0;
+    margin: 0 40px 0 0;
     width: 120px;
-    border-radius: 50%;
+    border-radius: 2px;
   }
 
   .tickets .titre-blanc, .tickets .contenu, .tickets .tags, .tickets .membres{
@@ -296,11 +298,9 @@ nav select{
   }
 
 #tagFilterSentence{
-  color: #AAA;
+  color: #aaa;
+  font-size: 0.9em;
 }
-  #tagFilterSpan{
-    color: #fff;
-  }
   #tagFilterSentence a{
       background: #333333;
       border: 1px solid #222222;
@@ -308,15 +308,75 @@ nav select{
       margin: 2px 0;
       padding: 2px 5px;
       display: inline-block;
-      transition:border-color 200ms;
+      transition:border-color 200ms,color 200ms;
       text-decoration: none;
-      color: #FFFFFF;
+      color: #aaa;
   }
   #tagFilterSentence a:hover{
       border: 1px solid #FFF;
+      color: #fff;
+  }
+  #tagFilterSentence #tagFilterSpan{
+    color: #fff;
+    padding: 0 10px 0 0;
   }
 
 
+/*------------------------------------*\
+    PROJETS-DETAIL
+\*------------------------------------*/
+
+.images-projet{
+  padding:50px 0;
+}
+.images-projet div{
+  width: 100px;
+  height: 100px;
+  margin:10px;
+  display: inline-block;
+  vertical-align: top;
+
+  background-color: #333333;
+  border: 1px solid #222222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:border-color 200ms, background-color 200ms;
+  cursor: pointer;
+}
+.images-projet div:hover,
+.images-projet div:focus{
+  border: 1px solid #fff;
+}
+.projet-detail-description{
+  font-style: italic;
+  padding: 10px 0 30px;
+  color:#AAA;
+  font-size: 0.9em;
+}
+
+.popup-masque{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.8);
+  display:none;
+  z-index: 9999;
+}
+.popup-masque img{
+  max-width: 80%;
+  max-height: 80%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  position: absolute;
+  display:none;
+}
 
 
 /*------------------------------------*\
