@@ -1,8 +1,7 @@
-
 {% if page.images %}
 <div id="slider">
 	<div class="items">
-		{% for image in page.images %}<figure class="item" style="background-images=url('{{image}}')"></figure>{% endfor %}
+		{% for image in page.images %}<figure class="item" style="background-images=url('{{site.baseurl}}/{{image}}')"></figure>{% endfor %}
 	</div>
 </div>
 {% endif %}

@@ -2,7 +2,7 @@
 layout: projet-detail
 nom_unique: battletower
 titre: Battle Tower
-images: [images/projets/default.png]
+images: [images/projets/battletower/battle_tower.png, images/projets/battletower/BattleTowerInGame.png, images/projets/battletower/BattleTowerMap.png, images/projets/battletower/fond_plateau_1.png, images/projets/battletower/tour_mauve.png, images/projets/battletower/tour_verte.png]
 description: "Un jeu au tour par tour à deux."
 technos: [scala, playframework, js, crafty]
 dates: [15/03/2013, 23/04/2013]
