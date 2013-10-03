@@ -2,7 +2,7 @@
 
 
 
-{% if page.image %}
+{% if page.images %}
 
 
 <div id="slider">
@@ -20,9 +20,7 @@
 			<!--<figcaption>4</figcaption>-->
 		</figure>
 
-{% for image in page.images %}
-	<a class="btn-gallery" onclick='GALLERY.load(event, "{{image}}")'><span></span></a>
-{% endfor %}
+{% for image in page.images %}<figure id="item4" class="item" style="background-images=url('{{image}}')"></figure>{% endfor %}
 
 	</div>
 </div>
