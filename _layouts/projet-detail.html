@@ -22,7 +22,11 @@ layout: default
 	{% endfor %}
 </div>
 
-{% include slideshow.html %}
+{% if page.images %}
+{% for image in page.images %}
+	<a href="{{site.baseurl}}/{{image}}"><img src="{{site.baseurl}}/{{image}}" /></a>
+{% endfor %}
+{% endif %}
 
 <p class="contenu">{{ content }}</p>
 
