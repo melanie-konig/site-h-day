@@ -1,53 +1,8 @@
 
-
-
-
 {% if page.images %}
-
-
 <div id="slider">
 	<div class="items">
-		<figure id="item1" class="item">
-			<!--<figcaption>coucou</figcaption>-->
-		</figure><!--
-		--><figure id="item2" class="item">
-			<!--<figcaption>2</figcaption>-->
-		</figure><!--
-		--><figure id="item3" class="item">
-			<!--<figcaption>3</figcaption>-->
-		</figure><!--
-		--><figure id="item4" class="item">
-			<!--<figcaption>4</figcaption>-->
-		</figure>
-
-{% for image in page.images %}<figure id="item4" class="item" style="background-images=url('{{image}}')"></figure>{% endfor %}
-
+		{% for image in page.images %}<figure class="item" style="background-images=url('{{image}}')"></figure>{% endfor %}
 	</div>
 </div>
-
-
-
-
-
-
 {% endif %}
-
-
-
-<div class="container-img">
-  <img id="image" src="{{page.images.first}}" alt="{{ page.title }} screenshot" width="65%" height="auto" />
-  {% if page.images and page.images.size > 1 %}
-  <div class="container-links-img">
-{% for image in page.images %}
-<a class="btn-gallery" onclick='GALLERY.load(event, "{{image}}")'><span></span></a>
-{% endfor %}
-</div>
-{% endif %}
-</div>
-<div id="urls" style="display:none">{{ page.images | join:"," }}</div>
-
-
-
-
-
-
