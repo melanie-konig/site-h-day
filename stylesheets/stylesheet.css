@@ -356,6 +356,9 @@ nav select{
   bottom:0;
   left: 0;
   right: 0;
+  width: 20px;
+  height: 20px;
+  z-index: -1;
 }
 .projet-detail-description{
   font-style: italic;
