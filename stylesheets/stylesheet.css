@@ -335,7 +335,7 @@ nav select{
   margin:10px;
   display: inline-block;
   vertical-align: top;
-
+  position: relative;
   background-color: #333333;
   border: 1px solid #222222;
   background-size: cover;
@@ -347,6 +347,15 @@ nav select{
 .images-projet div:hover,
 .images-projet div:focus{
   border: 1px solid #fff;
+}
+.images-projet div:before{
+  content: url("http://itkweb.github.io/site-h-day/images/unicorn-anime.gif");
+  position: absolute;
+  margin: auto;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
 }
 .projet-detail-description{
   font-style: italic;
