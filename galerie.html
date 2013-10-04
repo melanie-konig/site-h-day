@@ -7,19 +7,19 @@ title: Galerie
 	<h1 class="titre-rose specialfont text-center">Officiel</h1>
 	<div class="images-projet text-center">
 		{% for image in galerie.officiel %}
-			<div href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
+			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
 		{% endfor %}
 	</diV>
 	<h1 class="titre-rose specialfont text-center">Fan Art</h1>
 	<div class="images-projet text-center">
 		{% for image in galerie.fanart %}
-			<div href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
+			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
 		{% endfor %}
 	</diV>
 	<h1 class="titre-rose specialfont text-center">Photos</h1>
 	<div class="images-projet text-center">
 		{% for image in galerie.photos %}
-			<div href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
+			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
 		{% endfor %}
 	</diV>
 
@@ -36,22 +36,3 @@ title: Galerie
 	</div>
 {% endfor %}
 
-
-
-<!--
-
-
-<div class="images-projet text-center">
-	<a href="{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg" style="background-image:url('{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg');" alt="" /></a>
-
-</diV>
-<h1 class="titre-rose specialfont text-center">Fan Art</h1>
-<div class="images-projet text-center">
-	<a href="{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg" style="background-image:url('{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg');" alt="" /></a>
-</diV>
-<h1 class="titre-rose specialfont text-center">Photos</h1>
-<div class="images-projet text-center">
-	<a href="{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg" style="background-image:url('{{site.baseurl}}/images/galerie/fanart/hday_bg.jpg');" alt="" /></a>
-</diV>
-
--->
