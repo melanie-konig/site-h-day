@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<ul>
+{% for tuto in site.categories.tutos %}
+
+	<li><a href="{{site.baseurl}}{{tuto.url}}">{{tuto.titre}}</a></li>
+
+{% endfor %}
+</ul>

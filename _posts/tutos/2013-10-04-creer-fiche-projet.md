@@ -6,12 +6,12 @@ categories: [tutos]
 #Pré-requis
 
 * Etre membre de l'organisation ITKWeb sur github
-* [Avoir créer sa fiche personnelle]({% post_url 2013-10-04-creer-fiche-membre%})
-* [Avoir créé un repositery git]({% post_url 2013-10-04-creer-un-projet%})
+* [Avoir créer sa fiche personnelle]({% post_url tutos/2013-10-04-creer-fiche-membre%})
+* [Avoir créé un repositery git]({% post_url tutos/2013-10-04-creer-un-projet%})
 
 #Marche à suivre
 
-* Rendez vous sur (https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/projets)[https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/projets]
+* Rendez vous sur [la page github](https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/projets)
 * Cliquez sur le plus au dessus des fichiers
 
 <img src="{{site.baseurl}}/images/tutos/creer_fiche_projet_1.png" />
@@ -37,5 +37,5 @@ Description avec de l'html !!<br />
 <img src="{{site.baseurl}}/images/tutos/creer_fiche_projet_2.png" />
 
 * Remplir le "commit summary" avec le nom du projet
-* valider en cliquant sur "Commit New File"
+* Valider en cliquant sur "Commit New File"
 * Quelques minutes plus tard votre projet devrait être disponible sur <a href="{{site.baseurl}}/projets.html">la page des projets</a>
