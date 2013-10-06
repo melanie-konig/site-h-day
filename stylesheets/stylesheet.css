@@ -462,3 +462,22 @@ nav select{
     margin: 20px 80px;
     position:relative;
   }
+
+/*------------------------------------*\
+    TUTOS
+\*------------------------------------*/
+
+.code {
+  line-height: 1;
+  border: 1px solid #eee;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 0.3em;
+  max-width: 650px;
+  text-align: left;
+}
+.img-large {
+  max-width: 650px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}

@@ -1,41 +1,54 @@
 ---
 layout: default
-titre: Créer une fiche pour un projet
 categories: [tutos]
+titre: Créer une fiche pour un projet
+description: Apprenez à créer une page sur ce site pour votre projet.
 ---
-#Pré-requis
+<h1 class="titre-rose specialfont">Pré-requis</h1>
 
-* Etre membre de l'organisation ITKWeb sur github
-* [Avoir créer sa fiche personnelle]({% post_url tutos/2013-10-04-creer-fiche-membre%})
-* [Avoir créé un repositery git]({% post_url tutos/2013-10-04-creer-un-projet%})
+<div class="regles">
+<span>1</span>Etre membre de l'organisation ITKWeb sur github<br />
+<span>2</span><a href="{% post_url tutos/2013-10-04-creer-fiche-membre%}">Avoir créer sa fiche personnelle</a><br />
+<span>3</span><a href="{% post_url tutos/2013-10-04-creer-un-projet%}">Avoir créé un repositery git</a>
+</div>
 
-#Marche à suivre
+<h1 class="titre-rose specialfont">Marche à suivre</h1>
 
-* Rendez vous sur [la page github](https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/projets)
-* Cliquez sur le plus au dessus des fichiers
+<div class="regles">
+	<span>1</span>Rendez vous sur [la page github](https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/projets)<br />
+	<span>2</span>Cliquez sur le plus au dessus des fichiers<br />
 
-<img src="{{site.baseurl}}/images/tutos/creer_fiche_projet_1.png" />
+<div class="text-center">
+	<img class="img-large" src="{{site.baseurl}}/images/tutos/creer_fiche_projet_1.png" />
+</div>
 
-* Remplir le champ "Name your file..." en respectant la nomanclature : aaaa-mm-jj-nomprojet.md (où aaaa-mm-jj correspond à la date de création du projet)
-* Remplir le contenu en respectant les champs :
-<quote>
----<br />
-layout: projet-detail<br />
-nom_unique: nomprojet<br />
-titre: Nom du projet<br />
-images: [images/projets/battletower/default.png]<br />
-description: "Une courte description."<br />
-technos: [techno1, techno2]<br />
-dates: [date/du/hday]<br />
-equipe: [Prenom1, Prenom2]<br />
-categories: [projets]<br />
-urlSources: "https://github.com/ITKWeb/nomrepository"<br />
----<br />
-Description avec de l'html !!<br />
-</quote>
+	<span>3</span>Remplir le champ "Name your file..." en respectant la nomanclature : aaaa-mm-jj-nomprojet.md (où aaaa-mm-jj correspond à la date de création du projet)<br />
+	<span>4</span>Remplir le contenu en respectant les champs :<br />
 
-<img src="{{site.baseurl}}/images/tutos/creer_fiche_projet_2.png" />
+<div class="text-center">
+	<div class="code">
+		---<br />
+		layout: projet-detail<br />
+		nom_unique: nomprojet<br />
+		titre: Nom du projet<br />
+		images: [images/projets/battletower/default.png]<br />
+		description: "Une courte description."<br />
+		technos: [techno1, techno2]<br />
+		dates: [date/du/hday]<br />
+		equipe: [Prenom1, Prenom2]<br />
+		categories: [projets]<br />
+		urlSources: "https://github.com/ITKWeb/nomrepository"<br />
+		---<br />
+		Description en markdown ou en html !!<br />
+	</div>
+</div>
 
-* Remplir le "commit summary" avec le nom du projet
-* Valider en cliquant sur "Commit New File"
-* Quelques minutes plus tard votre projet devrait être disponible sur <a href="{{site.baseurl}}/projets.html">la page des projets</a>
+<div class="text-center">
+	<img class="img-large" src="{{site.baseurl}}/images/tutos/creer_fiche_projet_2.png" />
+</div>
+
+	<span>5</span>Remplir le "commit summary" avec le nom du projet<br />
+	<span>6</span>Valider en cliquant sur "Commit New File"<br />
+	<span>7</span>Quelques minutes plus tard votre projet devrait être disponible sur <a href="{{site.baseurl}}/projets.html">la page des projets</a><br />
+
+</div>
