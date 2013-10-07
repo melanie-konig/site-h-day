@@ -1,7 +1,7 @@
 ---
 layout: default
 categories: [tutos]
-titre: Créer un projet
+titre: Créer un projet Github
 description: Apprenez à créer un projet sur github.
 ---
 <h1 class="titre-rose specialfont">Pré-requis</h1>
