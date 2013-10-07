@@ -7,7 +7,8 @@ description: Apprenez à créer votre fiche personnelle.
 <h1 class="titre-rose specialfont">Pré-requis</h1>
 
 <div class="regles">
-	<span>1</span>Etre membre de l'organisation ITKWeb sur github
+	<span>1</span>Etre membre de l'organisation ITKWeb sur github<br />
+	<span>2</span><a href="https://github.com/login" target="_blank">Etre connecté à github</a><br />
 </div>
 
 <h1 class="titre-rose specialfont">Marche à suivre</h1>
