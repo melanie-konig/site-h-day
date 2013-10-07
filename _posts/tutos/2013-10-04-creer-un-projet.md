@@ -26,4 +26,4 @@ description: Apprenez à créer un projet sur github.
 
 <h1 class="titre-rose specialfont">Etape suivante</h1>
 
-[Créer une fiche pour votre projet]({% post_url tutos/2013-10-04-creer-fiche-projet %})
+[Créer une fiche pour votre projet]({{site.baseurl}}{% post_url tutos/2013-10-04-creer-fiche-projet %})

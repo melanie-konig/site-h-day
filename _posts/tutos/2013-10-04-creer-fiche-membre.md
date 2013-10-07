@@ -55,4 +55,4 @@ description: Apprenez à créer votre fiche personnelle.
 
 <h1 class="titre-rose specialfont">Etape suivante</h1>
 
-[Modifier votre fiche personnelle]({% post_url tutos/2013-10-04-modifier-fiche-membre %})
+[Modifier votre fiche personnelle]({{site.baseurl}}{% post_url tutos/2013-10-04-modifier-fiche-membre %})
