@@ -14,7 +14,7 @@ description: Apprenez à créer votre fiche personnelle.
 <h1 class="titre-rose specialfont">Marche à suivre</h1>
 
 <div class="regles">
-	<span>1</span>Rendez vous sur [la page github](https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/membres)<br />
+	<span>1</span>Rendez vous sur <a href="https://github.com/ITKWeb/site-h-day/tree/gh-pages/_posts/membres">la page github</a><br />
 	<span>2</span>Cliquez sur le plus au dessus des fichiers<br />
 
 <div class="text-center">
