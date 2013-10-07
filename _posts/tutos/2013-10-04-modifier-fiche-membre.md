@@ -29,7 +29,9 @@ description: Apprenez à modifier votre fiche personnelle.
 
 	<span>4</span>Remplir le contenu en respectant les champs :<br />
 
-<div class="text-center">
+	<p class="tickets tutos-warning">Attention à ne pas toucher les variables layout et categories !</p>
+
+<div class="tickets tutos-tickets">
 	<div class="code">
 		---<br />
 		layout: equipe<br />

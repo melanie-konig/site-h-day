@@ -25,7 +25,9 @@ description: Apprenez à créer une page sur ce site pour votre projet.
 	<span>3</span>Remplir le champ "Name your file..." en respectant la nomanclature : aaaa-mm-jj-nomprojet.md (où aaaa-mm-jj correspond à la date de création du projet)<br />
 	<span>4</span>Remplir le contenu en respectant les champs :<br />
 
-<div class="text-center">
+	<p class="tickets tutos-warning">Attention à ne pas toucher les variables layout et categories !</p>
+
+<div class="tickets tutos-tickets">
 	<div class="code">
 		---<br />
 		layout: projet-detail<br />

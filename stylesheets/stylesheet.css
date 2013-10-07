@@ -474,11 +474,25 @@ nav select{
   margin: 1em auto;
   padding: 1em;
   border-radius: 0.3em;
-  max-width: 650px;
   text-align: left;
 }
+
 .img-large {
   max-width: 650px;
   padding: 5px;
   border: 1px solid #ccc;
+}
+
+.tutos-warning {
+  margin: auto;
+  padding: 10px;
+  max-width: 630px;
+  margin: auto;
+  text-align: center;
+}
+
+.tutos-tickets {
+  margin: 1em auto;
+  max-width: 630px;
+  padding: 10px;
 }
