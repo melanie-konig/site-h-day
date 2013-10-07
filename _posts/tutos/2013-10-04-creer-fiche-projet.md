@@ -8,8 +8,8 @@ description: Apprenez à créer une page sur ce site pour votre projet.
 
 <div class="regles">
 <span>1</span>Etre membre de l'organisation ITKWeb sur github<br />
-<span>2</span><a href="{% post_url tutos/2013-10-04-creer-fiche-membre%}">Avoir créer sa fiche personnelle</a><br />
-<span>3</span><a href="{% post_url tutos/2013-10-04-creer-un-projet%}">Avoir créé un repositery git</a>
+<span>2</span><a href="{{site.baseurl}}{% post_url tutos/2013-10-04-creer-fiche-membre%}">Avoir créer sa fiche personnelle</a><br />
+<span>3</span><a href="{{site.baseurl}}{% post_url tutos/2013-10-04-creer-un-projet%}">Avoir créé un repositery git</a>
 </div>
 
 <h1 class="titre-rose specialfont">Marche à suivre</h1>

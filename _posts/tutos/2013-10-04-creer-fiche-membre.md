@@ -49,7 +49,7 @@ description: Apprenez à créer votre fiche personnelle.
 
 	<span>5</span>Remplir le "commit summary" avec votre prénom<br />
 	<span>6</span>Valider en cliquant sur "Commit New File"<br />
-	<span>7</span>Quelques minutes plus tard votre fiche personnelle devrait être disponible sur [la page de l'équipe]({{site.baseurl}}/equipe.html)<br />
+	<span>7</span>Quelques minutes plus tard votre fiche personnelle devrait être disponible sur <a href="{{site.baseurl}}/equipe.html">la page de l'équipe</a><br />
 
 </div>
 
