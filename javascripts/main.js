@@ -7,8 +7,8 @@ function Decompte()
 {
     var date_actuelle = new Date(); // On déclare la date d'aujourd'hui.
     var annee = date_actuelle.getFullYear();
- 
-    var hday = new Date(annee, 10, 15, 9, 0, 0); // Prochain HDAY 08/10/2013 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
+
+    var hday = new Date(annee, 11, 21, 9, 0, 0); // Prochain HDAY 08/10/2013 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
 	
 	// si le Hday est en cours ou dépassé
 	if (hday.getTime() < date_actuelle.getTime()){
