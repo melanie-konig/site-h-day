@@ -14,13 +14,11 @@
   </head>
   <body>
     <div id="container">
-    <header id="header" class="header text-center">
-      <a href="{{site.baseurl}}/index.html"><img src="{{site.baseurl}}/images/h-day-logo.png" alt="iTK's HACKING DAY" class="logo"></a>
-      <div id="countdown-header"></div>
-      <a href="{{site.baseurl}}/index.html"><img id="logosmall" src="{{site.baseurl}}/images/h-day-logo-small.png" alt="iTK's HACKING DAY" class="logo"></a>
-      <nav class="nav">
+    <header id="{% if page.url contains "index.html" %}header-home{% else %}header-top{% endif %}" class="header text-center specialfont-bold">
+      <a href="{{site.baseurl}}/index.html" class="logo"><span class="color-hardpink">HACKING</span><span class="logo-slashes"><span class="logo-slash">/</span>/</span>DAY</a>
+      <nav class="nav color-hardpink">
         <ul id="navigation">
-          <li><a href="{{site.baseurl}}/index.html" {% if page.url contains "index.html" %}class="active"{% endif %}>Le H-Day</a></li>
+          <li><a href="{{site.baseurl}}/index.html" {% if page.url contains "index.html" %}class="active"{% endif %}>Accueil</a></li>
           <li><a href="{{site.baseurl}}/projets.html" {% if page.url contains "projets.html" %}class="active"{% endif %}>Projets</a></li>
           <li><a href="{{site.baseurl}}/timeline.html" {% if page.url contains "timeline.html" %}class="active"{% endif %}>Timeline</a></li>
           <li><a href="{{site.baseurl}}/equipe.html" {% if page.url contains "equipe.html" %}class="active"{% endif %}>Equipe</a></li>
@@ -29,10 +27,12 @@
         </ul>
       </nav>
     </header>
-<section class="main-section max-width {% if page.url contains "timeline.html" or page.url contains "tutos.html" %}main-section-timeline{% endif %}">
-    {{ content }}
-</section>
-    <footer class="footer">Copyright 2013 - Made by the <a href="http://www.itkweb.com" class="link">ITK team</a>
+    {% if page.url contains "index.html" %}<div id="countdown" class="specialfont-bold color-hardpink"></div>{% endif %}
+    <section class="main-section">
+        {{ content }}
+    </section>
+
+    <footer class="footer">Copyright 1998 - Made by the <a href="http://www.itkweb.com" class="link">ITK team</a>
     </footer>
   </div>
   </body>

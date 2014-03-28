@@ -2,12 +2,13 @@
 layout: default
 title: Tutos
 ---
-<div class="timeline-block timeline-block-empty"></div>
+
+<div class="text-center tutos">
 {% for tuto in site.categories.tutos %}
-	<div class="timeline-block">
-		<div class="timeline-date">{{ tuto.date | date_to_string }}<img src="{{site.baseurl}}/images/icon.png"></div>
-		<h1 class="specialfont timeline-titre"><a class="tickets-global-link" href="{{site.baseurl}}{{tuto.url}}">{{tuto.titre}}</a></h1>
-		<div class="tags timeline-projets">{{tuto.description}}</div>
+	<div class="tuto">
+		<span class="specialfont tuto-how">Comment...</span>
+		<h1 class="specialfont tuto-titre"><a class="tickets-global-link" href="{{site.baseurl}}{{tuto.url}}">{{tuto.titre}}</a></h1>
+		<div class="tuto-description">{{tuto.description}}</div>
 	</div>
 {% endfor %}
-<div class="timeline-block timeline-block-empty"></div>
+</div>

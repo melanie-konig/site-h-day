@@ -1,4 +1,11 @@
-pygments: true
 name: "H-Day"
 description: "H-Day site"
 baseurl: /site-h-day
+
+# GitHub Defaults
+lsi: false
+pygments: false
+safe: true
+
+# UTF-8 & parse errors fix
+markdown: redcarpet

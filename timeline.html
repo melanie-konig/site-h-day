@@ -3,12 +3,15 @@ layout: default
 title: H-Days
 ---
 
-<div class="timeline-block timeline-block-empty"></div>
+
 {% for hd in site.categories.hday %}
-	<div class="timeline-block">
-		<div class="timeline-date">{{ hd.date | date_to_string }}<img src="{{site.baseurl}}/images/icon.png"></div>
-		<h1 class="specialfont timeline-titre">{{ hd.title }}</h1>
-		<div class="tags timeline-projets">
+	<div class="timeline-blocks">
+		<div class="timeline-block-left">
+			<div class="timeline-date">{{ hd.date | date_to_string }}</div>
+			<h1 class="specialfont timeline-titre">{{ hd.title }}</h1>
+		</div>
+		<div class="timeline-block-right">
+			<div class="tags timeline-projets">
 			{% for projet in site.categories.projets %}
 				{% if hd.projets contains projet.nom_unique %}
 					<a href="{{site.baseurl}}{{ projet.url }}">
@@ -16,7 +19,7 @@ title: H-Days
 					</a><br />
 				{% endif %}
 			{% endfor %}
+			</div>
 		</div>
 	</div>
 {% endfor %}
-<div class="timeline-block timeline-block-empty"></div>

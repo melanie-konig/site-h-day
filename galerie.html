@@ -4,35 +4,30 @@ title: Galerie
 ---
 
 {% for galerie in site.categories.galeries %}
-	<h1 class="titre-rose specialfont text-center">Officiel</h1>
-	<div class="images-projet text-center">
+<div class="bg-white galerie">
+	<h1 class="specialfont-bold text-center">Fond d'écrans Officiels</h1>
+	<div class="images-gallery text-center max-width">
 		{% for image in galerie.officiel %}
-			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
-		{% endfor %}
-	</diV>
-	<h1 class="titre-rose specialfont text-center">Fan Art</h1>
-	<div class="images-projet text-center">
-		{% for image in galerie.fanart %}
-			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
-		{% endfor %}
-	</diV>
-	<h1 class="titre-rose specialfont text-center">Photos</h1>
-	<div class="images-projet text-center">
-		{% for image in galerie.photos %}
-			<div style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
-		{% endfor %}
-	</diV>
-
-	<div class="popup-masque">
-		{% for image in galerie.officiel %}
-			<img src="{{site.baseurl}}/{{image}}" alt="" data-imageNum="{{image}}" />
-		{% endfor %}
-		{% for image in galerie.fanart %}
-			<img src="{{site.baseurl}}/{{image}}" alt="" data-imageNum="{{image}}" />
-		{% endfor %}
-		{% for image in galerie.photos %}
-			<img src="{{site.baseurl}}/{{image}}" alt="" data-imageNum="{{image}}" />
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
 		{% endfor %}
 	</div>
+</div>
+<div class="galerie">
+	<h1 class="specialfont-bold text-center">Fan Art</h1>
+	<div class="images-gallery text-center max-width">
+		{% for image in galerie.fanart %}
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+		{% endfor %}
+	</div>
+</div>
+<div class="bg-white galerie">
+	<h1 class="specialfont-bold text-center">Photos des H-Days</h1>
+	<div class="images-gallery text-center max-width">
+		{% for image in galerie.photos %}
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+		{% endfor %}
+	</div>
+</div>
+<div id="popup-masque"></div>
 {% endfor %}
 

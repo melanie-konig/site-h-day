@@ -8,7 +8,7 @@ function Decompte()
     var date_actuelle = new Date(); // On déclare la date d'aujourd'hui.
     var annee = date_actuelle.getFullYear();
 
-    var hday = new Date(annee, 00, 01, 9, 0, 0); // Prochain HDAY 01/01/2013 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
+    var hday = new Date(annee, 03, 25, 9, 0, 0); // Prochain HDAY 25/04/2014 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
 	
 	// si le Hday est en cours ou dépassé
 	if (hday.getTime() < date_actuelle.getTime()){
@@ -16,7 +16,7 @@ function Decompte()
 			var texte = "H-Day en cours !";
 			return texte;
 		}else{
-			var texte = "Inconnu...";
+			var texte = "Date inconnue...";
 			return texte;
 		}
 	}
@@ -47,16 +47,84 @@ function Decompte()
 function CompteARebours()
 {
 	var texte = Decompte();
-	document.getElementById("countdown-header").innerHTML = texte;
-	if(document.getElementById("countdown-section")) document.getElementById("countdown-section").innerHTML = texte;
+	if(texte){
+		if(document.getElementById("countdown")) document.getElementById("countdown").innerHTML = texte;
+		if(document.getElementById("countdown-section")) document.getElementById("countdown-section").innerHTML = texte;
+	}
 }
 setInterval(CompteARebours, 10); // Rappel de la fonction toutes les 1000 millisecondes (toutes les secondes quoi !).
 
 
 
 /*------------------------------------*\
-    SCROLL SPY
+    Konami
 \*------------------------------------*/
+
+
+$(function() {
+	var kkeys = [38,38,40,40,37,39,37,39,66,65];
+	var nextKkey = 0;
+	var maxKeyIndex = 0;
+	var isthereaunicornhere = false;
+
+	var unic = document.createElement("img");
+	unic.src = '/images/robotunicornattack.gif';
+	unic.setAttribute("id", "RobotUnicornAttack");
+	
+	function KonamiCode(keyPressed) {
+		maxKeyIndex = kkeys.length;
+		if (keyPressed === kkeys[nextKkey])
+			nextKkey++;
+		else
+			nextKkey = 0;
+		if(nextKkey >= maxKeyIndex) {
+			console.log("Konami Code");
+			if(!isthereaunicornhere){
+				$("#container")[0].appendChild(unic);
+				var isthereaunicornhere = true;
+			}
+			$("#RobotUnicornAttack")[0].style.animationPlayState="running" 
+			$("#RobotUnicornAttack")[0].style.webkitAnimationPlayState="running" 
+			nextKkey = 0;
+		}
+	}
+
+ 	$(document).on('keydown', function(e){
+		KonamiCode(e.which);
+		//console.log(String.fromCharCode(e.which) + " = " + e.which);
+	});
+
+
+
+
+});
+
+
+/*------------------------------------*\
+    IMAGE POPUP
+\*------------------------------------*/
+
+$(function () {
+    $('.imgThumbnail').on("click",function(){
+    	$('#popup-masque')[0].style.display="block";
+		var zoomedimg = document.createElement("img");
+		zoomedimg.src = this.getAttribute("data-imagePath");
+		$("#popup-masque")[0].appendChild(zoomedimg);
+    	$("#popup-masque")[0].style.display="block";
+    });
+    $('#popup-masque').on("click",function(){
+		while ($("#popup-masque")[0].firstChild) {
+		    $("#popup-masque")[0].removeChild($("#popup-masque")[0].firstChild);
+		}
+    	$("#popup-masque")[0].style.display="none";
+    });
+});
+
+
+
+/*------------------------------------*\
+    SCROLL SPY
+\*------------------------------------
 
 
 $(function () {
@@ -86,3 +154,4 @@ $(function () {
     		});
     });
 });
+*/

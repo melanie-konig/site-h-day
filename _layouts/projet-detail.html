@@ -2,46 +2,56 @@
 layout: default
 ---
 
-<div class="date">{% for date in page.dates %}{{ date }}<br /> {% endfor %}</div>
-<h1 class="specialfont titre-blanc">{{ page.titre }} {%if page.urlSources%}<a href="{{page.urlSources}}" target="_blank"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{%endif%}</h1>
-<p class="projet-detail-description">{{ page.description }}</p>
-<div class="tags">
-	<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
-	{% for techno in page.technos %}
-		<a href="{{ site.baseurl }}/projets.html#{{techno}}" tag="{{techno}}">{{ techno }}</a>
-	{% endfor %}
+<div class="text-center projet-detail bg-white">
+	<h1 class="specialfont-bold text-center">{{ page.titre }}</h1>
+	<div class="date">{% for date in page.dates %}{{ date }} {% endfor %}</div>
+	{%if page.urlSources%}<a href="{{page.urlSources}}" target="_blank"><img src="{{site.baseurl}}/images/equipes/github.png" /></a>{%endif%}
+	<p class="projet-detail-description">{{ page.description }}</p>
 </div>
-<div class="membres">
-	<img src="{{site.baseurl}}/images/membres.png" alt="Membres : ">
-	{% for prenom in page.equipe %}
-		{% for membre in site.categories.equipes %}
-			{% if prenom == membre.prenom %}
-				<a href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
-</div>
-
-
-<p class="contenu">{{ content }}</p>
-
-{% if page.images %}
-	<div class="images-projet text-center">
-		{% for image in page.images %}
-			<div href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imageNum="{{image}}" ></div>
-		{% endfor %}
-	</diV>
-	<div class="popup-masque">
-		{% for image in page.images %}
-			<img src="{{site.baseurl}}/{{image}}" alt="" data-imageNum="{{image}}" />
+<div class="max-width text-center projet-detail">
+	<div class="tags">
+		<img src="{{site.baseurl}}/images/tags.png" alt="Tags : " /> 
+		{% for tag in page.tags %}
+			<a href="{{ site.baseurl }}/projets.html#{{tag}}" tag="{{tag}}">{{ tag }}</a>
 		{% endfor %}
 	</div>
-{% endif %}
-{% for avancement in site.categories.avancements %}
-	{% if avancement.projet_nom_unique == page.nom_unique %}
-<article class="tickets">
-	<div class="date">{{ avancement.date | date_to_string }}</div>
-	{{avancement.content}}
-</article>
+	<div class="membres">
+		<img src="{{site.baseurl}}/images/membres.png" alt="Membres : ">
+		{% for prenom in page.equipe %}
+			{% for membre in site.categories.equipes %}
+				{% if prenom == membre.prenom %}
+					<a href="{{ site.baseurl }}{{ membre.url }}">{{prenom}}</a>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</div>
+	<p class="contenu">{{ content }}</p>
+
+	{% if page.prodlink %}
+		<a class="link" href="{{page.prodlink}}">{{page.prodlink}}</a>
 	{% endif %}
-{% endfor %}
+	{% if page.images %}
+		<div class="images-gallery text-center">
+			{% for image in page.images %}
+				<div class="imgThumbnail" href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+			{% endfor %}
+		</diV>
+	{% endif %}
+	{% for avancement in site.categories.avancements %}
+		{% if avancement.projet_nom_unique == page.nom_unique %}
+	<article class="tickets">
+		<div class="date">{{ avancement.date | date_to_string }}</div>
+		{{avancement.content}}
+	</article>
+		{% endif %}
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+<div id="popup-masque"></div>
