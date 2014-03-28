@@ -68,7 +68,7 @@ $(function() {
 	var isthereaunicornhere = false;
 
 	var unic = document.createElement("img");
-	unic.src = '/images/robotunicornattack.gif';
+	unic.src = 'images/robotunicornattack.gif';
 	unic.setAttribute("id", "RobotUnicornAttack");
 	
 	function KonamiCode(keyPressed) {
@@ -81,7 +81,7 @@ $(function() {
 			console.log("Konami Code");
 			if(!isthereaunicornhere){
 				$("#container")[0].appendChild(unic);
-				var isthereaunicornhere = true;
+				isthereaunicornhere = true;
 			}
 			$("#RobotUnicornAttack")[0].style.animationPlayState="running" 
 			$("#RobotUnicornAttack")[0].style.webkitAnimationPlayState="running" 
