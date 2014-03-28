@@ -705,6 +705,7 @@ nav select{
     width: 200px;
     height: 200px;
     margin: 20px;
+    vertical-align: middle;
   }
     .tuto-how{
       color: #aaa;
