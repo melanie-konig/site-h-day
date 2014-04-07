@@ -33,7 +33,7 @@ layout: default
 	{% if page.images %}
 		<div class="images-gallery text-center">
 			{% for image in page.images %}
-				<div class="imgThumbnail" href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+				<div class="imgThumbnail" href="{{site.baseurl}}/{{image}}" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="{{site.baseurl}}/{{image}}" ></div>
 			{% endfor %}
 		</diV>
 	{% endif %}
