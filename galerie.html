@@ -8,7 +8,7 @@ title: Galerie
 	<h1 class="specialfont-bold text-center">Fond d'écrans Officiels</h1>
 	<div class="images-gallery text-center max-width">
 		{% for image in galerie.officiel %}
-			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="{{site.baseurl}}/{{image}}" ></div>
 		{% endfor %}
 	</div>
 </div>
@@ -16,7 +16,7 @@ title: Galerie
 	<h1 class="specialfont-bold text-center">Fan Art</h1>
 	<div class="images-gallery text-center max-width">
 		{% for image in galerie.fanart %}
-			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{site.baseurl}}/{{image}}" ></div>
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="{{site.baseurl}}/{{image}}" ></div>
 		{% endfor %}
 	</div>
 </div>
@@ -24,7 +24,7 @@ title: Galerie
 	<h1 class="specialfont-bold text-center">Photos des H-Days</h1>
 	<div class="images-gallery text-center max-width">
 		{% for image in galerie.photos %}
-			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="/{{image}}" ></div>
+			<div class="imgThumbnail" style="background-image:url('{{site.baseurl}}/{{image}}');" data-imagePath="{{site.baseurl}}/{{image}}" ></div>
 		{% endfor %}
 	</div>
 </div>
