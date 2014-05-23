@@ -7,8 +7,13 @@ function Decompte()
 {
     var date_actuelle = new Date(); // On déclare la date d'aujourd'hui.
     var annee = date_actuelle.getFullYear();
+    var mois = 06;
+    var jour = 11;
+    var heure = 09;
+    var min = 00;
+    var sec = 00;
 
-    var hday = new Date(annee, 03, 25, 9, 0, 0); // Prochain HDAY 25/04/2014 (attention les mois vont de 0 à 11) -> années / mois-1 / jour / h / min / s .
+    var hday = new Date(annee, mois-1, jour, heure, min, sec); // années / mois-1 / jour / h / min / s .
 	
 	// si le Hday est en cours ou dépassé
 	if (hday.getTime() < date_actuelle.getTime()){
@@ -66,10 +71,12 @@ $(function() {
 	var nextKkey = 0;
 	var maxKeyIndex = 0;
 	var isthereaunicornhere = false;
+	var howmanyunicorn = 0;
 
-	var unic = document.createElement("img");
-	unic.src = 'images/robotunicornattack.gif';
-	unic.setAttribute("id", "RobotUnicornAttack");
+	var unicorns = new Array();
+	unicorns[0] = document.createElement("img");
+	unicorns[0].src = 'images/robotunicornattack.gif';
+	unicorns[0].setAttribute("class", "RobotUnicornAttack");
 	
 	function KonamiCode(keyPressed) {
 		maxKeyIndex = kkeys.length;
@@ -80,11 +87,13 @@ $(function() {
 		if(nextKkey >= maxKeyIndex) {
 			console.log("Konami Code");
 			if(!isthereaunicornhere){
-				$("#container")[0].appendChild(unic);
+				$("#container")[0].appendChild(unicorns[0]);
 				isthereaunicornhere = true;
+			}else{
+				howmanyunicorn += 1;
+				unicorns[howmanyunicorn] = unicorns[0].cloneNode(true);
+				$("#container")[0].appendChild(unicorns[howmanyunicorn]);
 			}
-			$("#RobotUnicornAttack")[0].style.animationPlayState="running" 
-			$("#RobotUnicornAttack")[0].style.webkitAnimationPlayState="running" 
 			nextKkey = 0;
 		}
 	}

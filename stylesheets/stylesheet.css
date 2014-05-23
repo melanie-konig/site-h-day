@@ -452,6 +452,46 @@ nav select{
   }
 
 
+/*------------------------------------*\
+    PROJETS DETAILS
+\*------------------------------------*/
+
+
+
+.projet-detail{
+  padding: 50px 0;
+}
+
+.projet-detail h1{
+  padding: 0;
+}
+.projet-detail .date{
+  font-size: 0.8em;
+  color: #aaa;
+  font-style: italic;
+  padding: 0 0 20px;
+}
+
+.projet-detail-description{
+  padding: 30px 0 0;
+  color:#444;
+  font-size: 0.9em;
+}
+
+.projet-detail .membres,
+.projet-detail .tags{
+  padding: 0 0 20px;
+}
+.projet-detail .membres img,
+.projet-detail .tags img{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  top: 0;
+  left: 0;
+  padding: 5px 0 0;
+}
+
 
 /*------------------------------------*\
     TIMELINE
@@ -869,15 +909,20 @@ ul.stepbystep li{
   }
 
 
-#RobotUnicornAttack{
+
+/*------------------------------------*\
+    KONAMI
+\*------------------------------------*/
+
+.RobotUnicornAttack{
   position: fixed;
   bottom: 0;
   left: -50px;
   z-index: 999;
   -webkit-animation: run 20s linear; /* Chrome, Safari, Opera */
   animation: run 20s linear;
-  animation-play-state:paused;
-  -webkit-animation-play-state:paused; /* Safari and Chrome */
+  animation-iteration-count:1;
+  -webkit-animation-iteration-count:1; /*Safari and Chrome*/
 }
 
 /* Chrome, Safari, Opera */
@@ -893,40 +938,3 @@ ul.stepbystep li{
 }
 
 
-
-
-
-
-.projet-detail{
-  padding: 50px 0;
-}
-
-.projet-detail h1{
-  padding: 0;
-}
-.projet-detail .date{
-  font-size: 0.8em;
-  color: #aaa;
-  font-style: italic;
-  padding: 0 0 20px;
-}
-
-.projet-detail-description{
-  padding: 30px 0 0;
-  color:#444;
-  font-size: 0.9em;
-}
-
-.projet-detail .membres,
-.projet-detail .tags{
-  padding: 0 0 20px;
-}
-.projet-detail .membres img,
-.projet-detail .tags img{
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  top: 0;
-  left: 0;
-  padding: 5px 0 0;
-}
