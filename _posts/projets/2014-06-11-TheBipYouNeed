@@ -1,0 +1,13 @@
+---
+layout: projet-detail
+nom_unique: TheBipYouNeed
+titre: TheBipYouNeed
+images: [images/projets/TheBipYouNeed/logo.png]
+description: "Metronome."
+technos: [famo.us]
+dates: [date/du/hday]
+equipe: [Alexandre, Marine]
+categories: [projets]
+urlSources: "https://github.com/ITKWeb/TheBipYouNeed"
+---
+Un super métronome très stylé aux sont agréable et apaisant pour être toujours en rythme avec son temps !!! 
