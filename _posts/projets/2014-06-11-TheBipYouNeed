@@ -2,7 +2,7 @@
 layout: projet-detail
 nom_unique: TheBipYouNeed
 titre: TheBipYouNeed
-images: [images/projets/TheBipYouNeed/logo.png]
+images: [https://raw.githubusercontent.com/ITKWeb/TheBipYouNeed/master/assets/logo.png]
 description: "Metronome."
 technos: [famo.us]
 dates: [date/du/hday]
