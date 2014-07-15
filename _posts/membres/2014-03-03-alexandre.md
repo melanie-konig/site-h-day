@@ -1,15 +1,15 @@
- ---
+---
 layout: equipe
 categories: [equipes]
 nom: Mathieu
 prenom: Alexandre
-bio: ""
-photo: ""
+bio: 
+photo: 
 github: "http://github.com/poulp"
-facebook: ""
-twitter: ""
-viadeo: ""
-linkedin: ""
-googleplus: ""
-blog: ""
+facebook: 
+twitter: 
+viadeo: 
+linkedin: 
+googleplus: 
+blog: 
 ---
