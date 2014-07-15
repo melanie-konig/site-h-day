@@ -2,7 +2,7 @@
 layout: projet-detail
 nom_unique: superpixel
 titre: SuperPixel
-images: []
+images: [https://raw.githubusercontent.com/ITKWeb/SuperPixel/master/images/SuperPixelLogo%20-%20Copie.png]
 description: ""
 tags: [Javascript, NodeJS, Websocket]
 dates: [11/06/2014, 11/07/2014]
