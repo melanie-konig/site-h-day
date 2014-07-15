@@ -4,7 +4,7 @@ nom_unique: TheBipYouNeed
 titre: TheBipYouNeed
 images: ["https://raw.githubusercontent.com/ITKWeb/TheBipYouNeed/master/assets/logo.png"]
 description: "Métronome."
-technos: [famo.us, Javascript]
+technos: ["famo.us", "Javascript"]
 dates: [11/06/2014]
 equipe: [Alexandre, Marine]
 categories: [projets]
