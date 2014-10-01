@@ -7,8 +7,8 @@ function Decompte()
 {
     var date_actuelle = new Date(); // On déclare la date d'aujourd'hui.
     var annee = date_actuelle.getFullYear();
-    var mois = 06;
-    var jour = 11;
+    var mois = 10;
+    var jour = 03;
     var heure = 09;
     var min = 00;
     var sec = 00;
